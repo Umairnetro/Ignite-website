@@ -18,12 +18,13 @@ body {
 
 a {
   text-decoration: none;
+  color: var(--font-color);
 }
 
 :root {
   --background-color: rgb(28, 30, 36);
   --font-color: white;
-  --font-color2: #999999;
+  --font-color-secondary: #999999;
 }
 
 #navbar {
@@ -42,10 +43,35 @@ a {
 }
 
 #navbar .btn {
+  height: 2.3rem;
   color: inherit;
+  width: 100%;
+  max-width: 120px;
   border: 2px solid;
   border-radius: 40px;
-  padding: 5px 20px;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-effect {
+  width: 100%;
+  position: absolute;
+  bottom: -2px;
+  transition: all 0.2s linear;
+}
+
+.btn:hover .btn-effect {
+  bottom: -38px;
+}
+
+.btns {
+  width: 100%;
+  max-width: 120px;
+  height: 2.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #hero {
@@ -95,7 +121,7 @@ a {
 
 /* Cards */
 .heading {
-  color: var(--font-color2);
+  color: var(--font-color-secondary);
   font-weight: 300;
   font-size: 2.1rem;
 }
@@ -111,7 +137,7 @@ a {
 }
 
 .cards p {
-  color: var(--font-color2);
+  color: var(--font-color-secondary);
 }
 
 .cards img {
@@ -122,16 +148,47 @@ a {
   filter: contrast(1.25);
 }
 
+.more-content .btn-footer {
+  border: 2px solid white;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 170px;
+  max-height: 50px;
+  margin: auto;
+  border-radius: 40px;
+  overflow: hidden;
+
+  &:hover div {
+    transform: translateY(0);
+  }
+}
+
+.more-content .btn-footer div {
+  transition: all 0.2s linear;
+  transform: translateY(-50px);
+}
+
+.btn-footer div span {
+  color: var(--background-color);
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
 /* footer */
 footer p {
-  font-size:.9rem;
-  color: var(--font-color2);
+  font-size: 0.9rem;
+  color: var(--font-color-secondary);
 }
 
 .links {
-  color: var(--font-color2);
-  transition:all 0.3s linear;
+  color: var(--font-color-secondary);
+  transition: all 0.3s linear;
   &:hover {
-    color:var(--font-color);
+    color: var(--font-color);
   }
 }
