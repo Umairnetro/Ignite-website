@@ -28,7 +28,8 @@ a {
 }
 
 #navbar {
-  /* background-color: rgb(28, 30, 36); */
+  width: min(100% 220px);
+  background-color: rgb(28, 30, 36);
   color: white;
   padding: 20px 0;
   position: absolute;
@@ -190,5 +191,11 @@ footer p {
   transition: all 0.3s linear;
   &:hover {
     color: var(--font-color);
+  }
+}
+
+@media screen and (max-width = 340px) {
+  nav{
+    background-color: tomato;
   }
 }
