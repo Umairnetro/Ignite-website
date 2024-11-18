@@ -29,7 +29,7 @@ a {
 
 #navbar {
   width: min(100% 220px);
-  background-color: rgb(28, 30, 36);
+  /* background-color: rgb(28, 30, 36); */
   color: white;
   padding: 20px 0;
   position: absolute;
